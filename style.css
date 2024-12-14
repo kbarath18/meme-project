@@ -1,0 +1,142 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styling */
+  body {
+    background-color: #1e1e1e;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    color: #fff;
+  }
+  
+  /* Container Styling */
+  .container {
+    background-color: #2c2f38;
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    max-width: 700px;
+    width: 90%;          /* Use 90% of the screen width */
+    max-height: 80vh;    /* Maximum height of 80% of the viewport height */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .container:hover {
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
+  }
+  
+  /* Image Styling */
+  .container img {
+    width: 100%;            /* Ensures it takes the full width of its container */
+    max-width: 600px;       /* Limits the image to 600px maximum width */
+    max-height: 400px;      /* Limits the image to 400px maximum height */
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Title Styling */
+  #title {
+    font-size: 2rem;
+    color: #ff6347;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    transition: color 0.3s ease;
+  }
+  
+  #title:hover {
+    color: #fff;
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Button Styling */
+  #get-meme-btn {
+    background-color: #ff6347;
+    color: white;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  #get-meme-btn:hover {
+    background-color: #ff4500;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  #get-meme-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Keyframe Animation for Button Hover */
+  @keyframes buttonPulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  #get-meme-btn:focus {
+    animation: buttonPulse 1s ease-in-out;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 30px;
+    }
+  
+    #title {
+      font-size: 1.8rem;
+    }
+  
+    #get-meme-btn {
+      font-size: 1.1rem;
+      padding: 12px 25px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      padding: 20px;
+    }
+  
+    #title {
+      font-size: 1.5rem;
+    }
+  
+    #get-meme-btn {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+  }
+  
